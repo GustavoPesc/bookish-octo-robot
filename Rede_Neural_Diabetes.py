@@ -1,7 +1,7 @@
 """Previsao experimental da faixa da proxima glicemia.
 
 O modelo usa as cinco ultimas medicoes de glicose para prever a faixa da
-seguinte. A divisao de treino e teste e feita por paciente para evitar que
+seguinte. A divisao de treino e teste é feita por paciente para evitar que
 janelas do mesmo paciente aparecam nos dois conjuntos.
 """
 
@@ -198,7 +198,7 @@ def executar_modelo() -> None:
 		)
 		visualizacao.im_.colorbar.set_label("Quantidade")
 		eixos[0].set(
-			title="Matriz de confusao",
+			title="Matriz de confusão",
 			xlabel="Faixa prevista",
 			ylabel="Faixa real",
 		)
@@ -206,8 +206,8 @@ def executar_modelo() -> None:
 		eixos[1].plot(classificador.loss_curve_, color="darkorange")
 		eixos[1].set(
 			title="Perda no treinamento",
-			xlabel="Iteracao",
-			ylabel="Funcao de perda",
+			xlabel="Iteração",
+			ylabel="Função de perda",
 		)
 		eixos[1].grid(alpha=0.25)
 		eixos[2].axis("off")
